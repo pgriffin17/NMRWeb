@@ -1,0 +1,159 @@
+$green: #C3FA50;
+$title_first_letter_color: #FFFCFC;
+$body_text: #FFFCFC;
+$white: rgba(255,255,255,1);
+$top_stripe_color: rgba(92,72,253,1);
+$font-family_1: Source Sans Pro;
+
+$animation_list: (v3_620, v3_618, v3_619);
+$animation_length: length($animation_list);
+
+@for $i from 0 to $animation_length {
+	@keyframes color_anim#{$i} {
+		#{calc($i / $animation_length * 100)}% {
+			color: $white;
+		}
+		#{calc(($i * 2 + 1)/ ($animation_length * 2) * 100)}% {
+			color: $green;
+		}
+		#{calc(($i + 1) / $animation_length * 100)}% {
+			color: $white;
+		};
+	};
+	.#{nth($animation_list, $i + 1)} {
+		animation-duration: #{calc($animation_length * 5 / 3)}s;
+		animation-iteration-count: infinite;
+		animation-name: color_anim#{$i};
+	}
+};
+
+@keyframes arrowMove {
+	100% {
+		transform: rotate(180deg) scale(0.7,0.7);
+		left: 1241px;
+	}
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	font-size: 14px;
+	opacity: 0;
+	transition: opacity .5s;
+}
+.bkg {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 1080px;
+	overflow: hidden;
+	background: rgba(8,8,29,1);
+}
+.title {
+	color: $green;
+	text-align: left;
+	font-family: $font-family_1;
+	font-size: 168px;
+	font-weight: Bold;
+	line-height: 95%;
+}
+.nuclear {
+	position: absolute;
+	top: 380px;
+	left: 270px;
+	width: 959px;
+	height: 141.84px;
+}
+#first {
+	color: $title_first_letter_color;
+	font-size: 168px;
+}
+.magnetic {
+	position: absolute;
+	top: 508px;
+	left: 474px;
+	width: 959px;
+}
+.resonance {
+	position: absolute;
+	top: 637px;
+	left: 164px;
+	width: 959px;
+}
+.green_page_title {
+  width: 296px;
+  color: $green;
+  position: absolute;
+  top: 104px;
+  left: 368px;
+  font-family: Source Sans Pro;
+  font-weight: Regular;
+  font-size: 54px;
+  opacity: 1;
+  text-align: left;
+}
+.blue_stripe {
+	position: absolute;
+	top: 176px;
+	left: 0px;
+	width: 100%;
+	height: 4px;
+	overflow: hidden;
+	background: $top_stripe_color;
+}
+.arrow {
+	position: absolute;
+	top: 768px;
+	left: 1478px;
+	width: 244px;
+	height: 176px;
+	overflow: hidden;
+	background: url("../images/arrowHomepage.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 244px 176px;
+	&:focus {
+		animation: arrowMove 1s 2 alternate;
+	}
+	&:active {
+		animation: none;
+	}
+}
+.menu_bar {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 180px;
+	background: rgba(1,0,5,1);
+}
+.menu_button {
+	color: $white;
+	text-align: left;
+	font-family: $font-family_1;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 28px;
+}
+.menu_button .green {
+	color:$green;
+}
+.menu1 {
+	position: absolute;
+	top: 112px;
+	left: 1267px;
+	width: 180px;
+}
+.menu2 {
+	position: absolute;
+	top: 112px;
+	left: 1538px;
+	width: 154px;
+}
+.menu3 {
+	position: absolute;
+	top: 112px;
+	left: 1733px;
+	width: 192px;
+}

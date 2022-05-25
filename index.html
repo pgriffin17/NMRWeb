@@ -1,34 +1,41 @@
-<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
 <head>
-<link href="style.css" rel="stylesheet" />
-<link href="//db.onlinewebfonts.com/c/d5eabe909d080bbee3d3bbfe602bdeb4?family=Homestead" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link href="./css/out.css" rel="stylesheet" />
+    <title>Knox NMR Display</title>
+    <script type="text/javascript">
+    window.transitionToPage = function(href) {
+        document.querySelector('body').style.opacity = 0;
+        setTimeout(function() {
+            window.location.href = href
+        }, 500)
+    }
+
+    document.addEventListener('DOMContentLoaded', function(event) {
+        document.querySelector('body').style.opacity = 1;
+    })
+    </script>
 </head>
-<body>
-    <div class="main-content">
-        <h1>NUCLEAR MAGNETIC RESONANCE (NMR) SPECTROMETER</h1>
-        <a href="fundamentals.html" class="page-connect">
-                <h2>NMR FUNDAMENTALS</h2>
-        </a>
-        <a href="diagram.html" class="page-connect">    
-                <h2>NMR INSTRUMENTATION</h2>
-        </a>
-        <a href="spectrum.html" class="page-connect">
-                <h2>SPECTRUM ANALYSIS</h2>
-        </a>           
-        <a href="research.html" class="page-connect">
-                <h2>LAB RESEARCH</h2>
-        </a>
-        <a href="class.html" class="page-connect">
-                <h2>USE IN CLASS</h2>
-        </a>         
-        <a href="history.html" class="page-connect">
-                <h2>HISTORY</h2>
-        </a>
-        <a href="publications.html" class="page-connect">
-                <h2>PUBLICATIONS AND PRESENTATIONS</h2>
-        </a>           
-        <a href="credits.html" class="page-connect">
-                <h2>ACKNOWLEDGMENTS</h2>
-        </a>         
+<! The style in the body below removes the white margin on the edge and it makes
+text not selectable by the user (good for final display).>
+
+<body style="margin: 0; -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+    <div class="bkg">
+        <div class="title">
+            <span class="nuclear"><span id="first">N</span>UCLEAR</span>
+            <span class="magnetic"><span id="first">M</span>AGNETIC</span>
+            <span class="resonance"><span id="first">R</span>ESONANCE</span>
+        </div>
+        <div class="arrow" tabindex="0" onclick="transitionToPage('how-it-works.html')"></div>
+        <div class="menu_bar"></div>
+        <div class="blue_stripe"></div>
     </div>
 </body>
+
+</html>

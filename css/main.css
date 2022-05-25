@@ -1,0 +1,120 @@
+{
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v622_952 {
+  width: 100%;
+  height: 1080px;
+  background: rgba(8,8,29,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.nuclear {
+  width: 959px;
+  color: #C3FA50;
+  position: absolute;
+  top: 380px;
+  left: 270px;
+  font-family: Source Sans Pro;
+  font-weight: Bold;
+  font-size: 168px;
+  opacity: 1;
+  text-align: left;
+}
+.magnetic {
+  width: 959px;
+  color: url("../images/magnetic.png");
+  position: absolute;
+  top: 508px;
+  left: 474px;
+  font-family: Source Sans Pro;
+  font-weight: Bold;
+  font-size: 168px;
+  opacity: 1;
+  text-align: left;
+}
+.resonance {
+  width: 959px;
+  color: url("../images/resonance.png");
+  position: absolute;
+  top: 637px;
+  left: 164px;
+  font-family: Source Sans Pro;
+  font-weight: Bold;
+  font-size: 168px;
+  opacity: 1;
+  text-align: left;
+}
+.v622_957 {
+  width: 100%;
+  height: 4px;
+  background: rgba(92,72,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 176px;
+  left: 0px;
+  overflow: hidden;
+}
+.v622_958 {
+  width: 176px;
+  height: 243px;
+  background: url("../images/v622_958.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 768px;
+  left: 1721px;
+  overflow: hidden;
+}
+.name {
+  color: #fff;
+}
+.name {
+  color: #fff;
+}
+.v622_961 {
+  width: 100%;
+  height: 4px;
+  background: rgba(92,72,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 176px;
+  left: 2005px;
+  overflow: hidden;
+}
+.v622_962 {
+  width: 100%;
+  height: 180px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v622_963 {
+  width: 100%;
+  height: 180px;
+  background: rgba(1,0,5,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.v622_964 {
+  width: 100%;
+  height: 4px;
+  background: rgba(92,72,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 176px;
+  left: 0px;
+  overflow: hidden;
+}
