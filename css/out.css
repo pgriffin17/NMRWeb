@@ -59,6 +59,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: rgb(8, 8, 29);
+}
+
 body {
   font-size: 14px;
   opacity: 0;
@@ -92,9 +96,8 @@ body {
   height: 141.84px;
 }
 
-#first {
+.nuclear::first-letter {
   color: #FFFCFC;
-  font-size: 168px;
 }
 
 .magnetic {
@@ -104,11 +107,19 @@ body {
   width: 959px;
 }
 
+.magnetic::first-letter {
+  color: #FFFCFC;
+}
+
 .resonance {
   position: absolute;
   top: 637px;
   left: 164px;
   width: 959px;
+}
+
+.resonance::first-letter {
+  color: #FFFCFC;
 }
 
 .green_page_title {

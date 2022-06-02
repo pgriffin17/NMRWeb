@@ -25,9 +25,25 @@
     text not selectable by the user (good for final display).>
     <body style="margin: 0; -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
         <div class="bkg">
-            <div class="menu_bar"></div>
-            <div class="blue_stripe"></div><span class="green_page_title">How it Works</span>
-            <div class="right_panel"></div>
+            <span class="menu_button">
+            <div class="menu_bar">
+              
+              <div class="fundamentals">
+                  <span class="green">NMR<br> Fundamentals</span>
+              </div>
+              <div class="empty"></div>
+              <div class="courses">
+              Course <br>Usage
+              </div>
+              <div class="research">
+              Faculty Research
+              </div>
+              <div class="title"><span class="green_page_title">How it Works</span></div>
+              
+            </div>
+            </span>
+            <div class="left_panel"></div>
+            <div class="right_panel">
             <span class="body_title">NMR =
                 magnet +
             radio pulse</span>
@@ -37,11 +53,9 @@
                 <br><br>The instrument repeats the scan to maximize the signal and minimize noise. Then it collects the signals and performs a Fourier transform to convert the collected signal into a spectrum showing each individual RF frequency that made up the composite signal. These frequencies make up the desired NMR spectrum.
                 <br><br>For <sup>1</sup>H NMR spectroscopy, most often every hydrogen on a particular carbon will be identical to the others on the same carbon. Since there are often multiple H’s on the same carbon, many peaks in the proton NMR spectrum will end up representing more than one H. Again, the information about number of peaks is that the number of peaks corresponds to the number of unique proton environments.
             </span></div>
-            
-            <span class="menu_button">
-            <span class="green"><span class="menu1">NMR Fundamentals</span></span>
-            <span class="menu2">Course Usage</span>
-            <span class="menu3">Faculty Research</span></span>
+            </div>
+            <div class="blue_stripe"></div>
+            <div class="back_button" onclick="transitionToPage('index.html')"></div>
         <div class="home_button" onclick="transitionToPage('index.html')"><span class="home_nmr">N<span class="home_nmr_underline">MR</span></span></div>
     </div>
 </body>
