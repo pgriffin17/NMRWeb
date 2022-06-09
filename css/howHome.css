@@ -1,0 +1,86 @@
+@keyframes how-in {
+	0% {opacity: 0; left: -500px;}
+	100% {opacity: 1; left: 222px;}
+}
+@keyframes it-in {
+	0% {opacity: 0; left: 1125px;}
+	100% {opacity: 1; left: 476px;}
+}
+@keyframes works-in {
+	0% {opacity: 0; top: 1080px;}
+	100% {opacity: 1; top: 566px;}
+}
+@keyframes show-in {
+	0% {opacity: 0;}
+	35% {opacity: 1;}
+	50% {border: 3px solid #C8FE55;}
+	75% {border: 10px solid #C8FE55;}
+	100% {border: 3px solid #C8FE55;}
+}
+.left_panel {
+	background-color: rgba(8,8,29,1);
+}
+.home_title {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 196px;
+	line-height: 93%;
+}
+.how {
+	position: absolute;
+	width: 499px;
+	height: 169px;
+	left: 222px;
+	top: 159px;
+	animation-name: how-in;
+	animation-duration: 0.7s;
+	animation-fill-mode: both;
+	animation-delay: 1s;
+}
+.it {
+	position: absolute;
+	width: 148px;
+	height: 182px;
+	left: 476px;
+	top: 370px;
+	animation-name: it-in;
+	animation-duration: 0.7s;
+	animation-fill-mode: both;
+	animation-delay: 2s;
+}
+.works {
+	position: absolute;
+	width: 595px;
+	height: 172px;
+	left: 377px;
+	top: 556px;
+	animation-name: works-in;
+	animation-duration: 0.7s;
+	animation-fill-mode: both;
+	animation-delay: 3s;
+}
+.show_me_btn {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 56px;
+	line-height: 109%;
+	color: #C8FE55;
+	position: absolute;
+	width: 226px;
+	height: 226px;
+	left: 361px;
+	top: 331px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background-color: #3117FD;
+	border-radius: 50%;
+	border: 3px solid #C8FE55;
+	animation-name: show-in;
+	animation-duration: 2s;
+	animation-fill-mode: both;
+	animation-delay: 4s;
+}

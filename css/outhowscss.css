@@ -1,27 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  background-color: rgb(8, 8, 29);
-}
-
-body {
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.bkg {
-  position: relative;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 1080px;
-  overflow: hidden;
-  background: rgb(8, 8, 29);
-}
-
 .left_panel {
   width: 1125px;
   height: 900px;
@@ -91,6 +67,12 @@ sub {
   font-size: 65%;
 }
 
+mark {
+  background-color: transparent;
+  color: #C8FE55;
+  text-decoration: underline solid #C8FE55;
+}
+
 .menu_bar {
   width: 100%;
   height: 180px;
@@ -136,22 +118,10 @@ sub {
   margin-bottom: 15px;
 }
 
-.blue_stripe {
-  width: 100%;
-  height: 4px;
-  background: rgb(92, 72, 253);
-  opacity: 1;
-  position: absolute;
-  top: 176px;
-  left: 0px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-}
-
 .green_page_title {
   color: #C8FE55;
   font-family: Source Sans Pro;
-  font-weight: Regular;
+  font-weight: Normal;
   font-size: 54px;
   line-height: 93%;
 }
@@ -205,7 +175,7 @@ sub {
 
 .home_nmr_underline {
   color: #C8FE55;
-  text-decoration: underline solid white 7%;
+  text-decoration: underline solid #FFFCFC 7%;
 }
 
 .back_button {
@@ -245,4 +215,4 @@ sub {
   background: #555;
 }
 
-/*# sourceMappingURL=out.css.map */
+/*# sourceMappingURL=outhowscss.css.map */

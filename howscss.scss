@@ -1,17 +1,22 @@
+$green: #C8FE55;
+$title_first_letter_color: #FFFCFC;
+$body_text: #FFFCFC;
+$white: rgba(255,255,255,1);
+$top_stripe_color: rgba(92,72,253,1);
+$background_color: rgba(8,8,29,1);
+$font-family_1: Source Sans Pro;
+
 * {
   box-sizing: border-box;
 }
-
 html {
-  background-color: rgb(8, 8, 29);
+  background-color: $background_color;
 }
-
 body {
   font-size: 14px;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity .5s;
 }
-
 .bkg {
   position: relative;
   top: 0px;
@@ -19,9 +24,8 @@ body {
   width: 100%;
   height: 1080px;
   overflow: hidden;
-  background: rgb(8, 8, 29);
+  background: rgba(8,8,29,1);
 }
-
 .left_panel {
   width: 1125px;
   height: 900px;
@@ -31,11 +35,10 @@ body {
   top: 180px;
   left: 0px;
 }
-
 .right_panel {
   width: calc(100% - 1125px);
   height: 897px;
-  background: rgb(8, 8, 29);
+  background: rgba(8,8,29,1);
   opacity: 1;
   position: absolute;
   top: 183px;
@@ -43,7 +46,6 @@ body {
   float: left;
   overflow: hidden;
 }
-
 .right_text_box {
   width: 90%;
   height: 50%;
@@ -53,7 +55,6 @@ body {
   padding-left: 18%;
   padding-right: 30px;
 }
-
 .body_title {
   width: 90%;
   color: white;
@@ -66,7 +67,6 @@ body {
   opacity: 1;
   text-align: left;
 }
-
 .body_text {
   width: 525px;
   color: #FFFCFC;
@@ -80,21 +80,18 @@ body {
   opacity: 1;
   text-align: left;
 }
-
 sup {
   line-height: 0;
   font-size: 65%;
-}
-
+} 
 sub {
-  line-height: 0;
+  line-height:  0;
   font-size: 65%;
 }
-
 .menu_bar {
   width: 100%;
   height: 180px;
-  background: rgb(1, 0, 5);
+  background: rgba(1,0,5,1);
   opacity: 1;
   position: relative;
   top: 0px;
@@ -104,42 +101,33 @@ sub {
   grid-template-rows: 180px;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "title empty fundamentals courses research";
+  grid-template-areas:
+    "title empty fundamentals courses research";
 }
 
-.fundamentals {
-  grid-area: fundamentals;
-  position: absolute;
-  bottom: 18px;
-}
+.fundamentals { grid-area: fundamentals;
+position: absolute;
+bottom: 18px; }
 
-.empty {
-  grid-area: empty;
-}
+.empty { grid-area: empty; }
 
-.courses {
-  grid-area: courses;
-  position: absolute;
-  bottom: 18px;
-}
+.courses { grid-area: courses;
+position: absolute;
+bottom: 18px; }
 
-.research {
-  grid-area: research;
-  position: absolute;
-  bottom: 18px;
-}
+.research { grid-area: research;
+position: absolute;
+bottom: 18px; }
 
-.title {
-  grid-area: title;
-  text-align: end;
+.title { grid-area: title;
+    text-align: end;
   margin: auto;
-  margin-bottom: 15px;
-}
+  margin-bottom: 15px; }
 
 .blue_stripe {
   width: 100%;
   height: 4px;
-  background: rgb(92, 72, 253);
+  background: rgba(92,72,253,1);
   opacity: 1;
   position: absolute;
   top: 176px;
@@ -147,7 +135,6 @@ sub {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
-
 .green_page_title {
   color: #C8FE55;
   font-family: Source Sans Pro;
@@ -155,11 +142,9 @@ sub {
   font-size: 54px;
   line-height: 93%;
 }
-
 .name {
   color: #fff;
 }
-
 .menu_button {
   color: #FFF;
   text-align: left;
@@ -168,16 +153,14 @@ sub {
   font-weight: 400;
   line-height: 28px;
 }
-
 .menu_button .green {
   color: #C8FE55;
 }
-
 .home_button {
   box-sizing: border-box;
   width: 119px;
   height: 59px;
-  background: rgb(17, 17, 65);
+  background: rgba(17,17,65,1);
   padding: 4px 15px;
   gap: 15px;
   opacity: 1;
@@ -187,14 +170,13 @@ sub {
   overflow: hidden;
   border: 1px solid #FFFFFF;
 }
-
 .home_nmr {
   width: 89px;
   color: #FFFCFC;
   position: absolute;
   top: 4px;
   left: 15px;
-  text-shadow: 0px 0.9377992153px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 0.9377992153167725px 0px rgba(0, 0, 0, 0.25);
   font-family: Source Sans Pro;
   font-weight: Bold;
   font-size: 43px;
@@ -202,12 +184,10 @@ sub {
   opacity: 1;
   text-align: left;
 }
-
 .home_nmr_underline {
   color: #C8FE55;
   text-decoration: underline solid white 7%;
 }
-
 .back_button {
   position: absolute;
   width: 212px;
@@ -220,23 +200,22 @@ sub {
   background-size: 38px 46px;
   transform: rotate(180deg);
 }
-
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
-  background: rgb(17, 17, 65);
+  background: rgba(17,17,65,1);
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #555563;
-  border-radius: 8px;
+  border-radius:  8px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
-  background: rgba(170, 170, 170, 0.8);
+  background: #aaaaaacc;
   border: 2px solid #555563;
 }
 
@@ -244,5 +223,3 @@ sub {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-/*# sourceMappingURL=out.css.map */

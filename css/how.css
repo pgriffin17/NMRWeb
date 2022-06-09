@@ -129,7 +129,7 @@ bottom: 18px; }
   overflow: hidden;
 }
 .green_page_title {
-  color: #C3FA50;
+  color: #C8FE55;
   font-family: Source Sans Pro;
   font-weight: Regular;
   font-size: 54px;
@@ -147,7 +147,7 @@ bottom: 18px; }
   line-height: 28px;
 }
 .menu_button .green {
-  color: #C3FA50;
+  color: #C8FE55;
 }
 .home_button {
   box-sizing: border-box;
@@ -178,7 +178,7 @@ bottom: 18px; }
   text-align: left;
 }
 .home_nmr_underline {
-  color: #C3FA50;
+  color: #C8FE55;
   text-decoration: underline solid white 7%;
 }
 .back_button {
