@@ -8,7 +8,7 @@
 }
 @keyframes works-in {
 	0% {opacity: 0; top: 1080px;}
-	100% {opacity: 1; top: 566px;}
+	100% {opacity: 1; top: 556px;}
 }
 @keyframes show-in {
 	0% {opacity: 0;}
@@ -83,4 +83,8 @@
 	animation-duration: 2s;
 	animation-fill-mode: both;
 	animation-delay: 4s;
+}
+.show_me_btn:active {
+	color: #a0cb44;
+	background-color: #2712ca;
 }

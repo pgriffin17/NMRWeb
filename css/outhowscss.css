@@ -143,17 +143,25 @@ mark {
   color: #C8FE55;
 }
 
+.home_click {
+  position: absolute;
+  width: 181px;
+  height: 97px;
+  left: 17px;
+  top: 11px;
+}
+
 .home_button {
   box-sizing: border-box;
   width: 119px;
   height: 59px;
-  background: rgb(17, 17, 65);
+  background: #111142;
   padding: 4px 15px;
   gap: 15px;
   opacity: 1;
   position: absolute;
-  top: 30px;
-  left: 49px;
+  top: 19px;
+  left: 32px;
   overflow: hidden;
   border: 1px solid #FFFFFF;
 }
