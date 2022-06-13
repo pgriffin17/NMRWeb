@@ -1,4 +1,4 @@
-$title_green: #C8FE55;
+$green: #C8FE55;
 $title_first_letter_color: #FFFCFC;
 $body_text: #FFFCFC;
 $white: rgba(255,255,255,1);
@@ -37,7 +37,7 @@ body {
 	background: rgba(8,8,29,1);
 }
 .home_title {
-	color: $title_green;
+	color: $green;
 	text-align: left;
 	font-family: $font-family_1;
 	font-size: 168px;
@@ -140,10 +140,10 @@ bottom: 18px; }
   line-height: 28px;
 }
 .menu_button .green {
-  color: $title_green;
+  color: $green;
 }
 .nmr_line {
-	color: $title_green;
+	color: $green;
 }
 .page_list {
 	position: absolute;
