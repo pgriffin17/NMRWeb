@@ -1,4 +1,4 @@
-$green: #C8FE55;
+$title_green: #C8FE55;
 $title_first_letter_color: #FFFCFC;
 $body_text: #FFFCFC;
 $white: rgba(255,255,255,1);
@@ -9,25 +9,6 @@ $font-family_1: Source Sans Pro;
 
 $animation_list: (v3_620, v3_618, v3_619);
 $animation_length: length($animation_list);
-
-@for $i from 0 to $animation_length {
-	@keyframes color_anim#{$i} {
-		#{calc($i / $animation_length * 100)}% {
-			color: $white;
-		}
-		#{calc(($i * 2 + 1)/ ($animation_length * 2) * 100)}% {
-			color: $green;
-		}
-		#{calc(($i + 1) / $animation_length * 100)}% {
-			color: $white;
-		};
-	};
-	.#{nth($animation_list, $i + 1)} {
-		animation-duration: #{calc($animation_length * 5 / 3)}s;
-		animation-iteration-count: infinite;
-		animation-name: color_anim#{$i};
-	}
-};
 
 @keyframes arrowMove {
 	100% {
@@ -56,7 +37,7 @@ body {
 	background: rgba(8,8,29,1);
 }
 .home_title {
-	color: $green;
+	color: $title_green;
 	text-align: left;
 	font-family: $font-family_1;
 	font-size: 168px;
@@ -159,9 +140,10 @@ bottom: 18px; }
   line-height: 28px;
 }
 .menu_button .green {
-  color: $green;
+  color: $title_green;
 }
 .nmr_line {
+	color: $title_green;
 }
 .page_list {
 	position: absolute;

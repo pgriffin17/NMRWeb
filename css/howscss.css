@@ -11,7 +11,7 @@
 .right_panel {
   width: calc(100% - 1125px);
   height: 897px;
-  background: rgb(8, 8, 29);
+  background: #08081d;
   opacity: 1;
   position: absolute;
   top: 183px;
@@ -70,48 +70,62 @@ sub {
 mark {
   background-color: transparent;
   color: #C8FE55;
-  text-decoration: underline solid #C8FE55;
+  -webkit-text-decoration: underline solid #C8FE55;
+          text-decoration: underline solid #C8FE55;
 }
 
 .menu_bar {
   width: 100%;
   height: 180px;
-  background: rgb(1, 0, 5);
+  background: #010005;
   opacity: 1;
   position: relative;
   top: 0px;
   left: 0px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1125px calc(100% - 1777px) 270px 195px 187px;
-  grid-template-rows: 180px;
+  -ms-grid-columns: 1125px calc(100% - 1777px) 270px 195px 187px;
+      grid-template-columns: 1125px calc(100% - 1777px) 270px 195px 187px;
+  -ms-grid-rows: 180px;
+      grid-template-rows: 180px;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "title empty fundamentals courses research";
+      grid-template-areas: "title empty fundamentals courses research";
 }
 
 .fundamentals {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: fundamentals;
   position: absolute;
   bottom: 18px;
 }
 
 .empty {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: empty;
 }
 
 .courses {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
   grid-area: courses;
   position: absolute;
   bottom: 18px;
 }
 
 .research {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
   grid-area: research;
   position: absolute;
   bottom: 18px;
 }
 
 .title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: title;
   text-align: end;
   margin: auto;
@@ -152,7 +166,8 @@ mark {
 }
 
 .home_button {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 119px;
   height: 59px;
   background: #111142;
@@ -172,7 +187,7 @@ mark {
   position: absolute;
   top: 4px;
   left: 15px;
-  text-shadow: 0px 0.9377992153px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 0.9378px 0px rgba(0, 0, 0, 0.25);
   font-family: Source Sans Pro;
   font-weight: Bold;
   font-size: 43px;
@@ -183,7 +198,8 @@ mark {
 
 .home_nmr_underline {
   color: #C8FE55;
-  text-decoration: underline solid #FFFCFC 7%;
+  -webkit-text-decoration: underline solid #FFFCFC 7%;
+          text-decoration: underline solid #FFFCFC 7%;
 }
 
 .back_button {
@@ -196,13 +212,14 @@ mark {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 38px 46px;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
-  background: rgb(17, 17, 65);
+  background: #111141;
 }
 
 /* Track */
@@ -214,7 +231,7 @@ mark {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
-  background: rgba(170, 170, 170, 0.8);
+  background: #aaaaaacc;
   border: 2px solid #555563;
 }
 
@@ -222,5 +239,4 @@ mark {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-/*# sourceMappingURL=outhowscss.css.map */
+/*# sourceMappingURL=howscss.css.map */
