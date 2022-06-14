@@ -146,6 +146,7 @@ bottom: 18px; }
 	color: $green;
 }
 .page_list {
+	display: none;
 	position: absolute;
 	top: 372px;
 	left: 1338px;
@@ -153,7 +154,6 @@ bottom: 18px; }
 	height: 540px;
 	background: $background_color;
 
-	display: flex;
 	flex-wrap: nowrap;
 	flex-direction: column;
 }

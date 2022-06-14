@@ -34,9 +34,9 @@
 	left: 222px;
 	top: 159px;
 	animation-name: how-in;
-	animation-duration: 0.7s;
+	animation-duration: 0.5s;
 	animation-fill-mode: both;
-	animation-delay: 1s;
+	animation-delay: 0.8s;
 }
 .it {
 	position: absolute;
@@ -45,9 +45,9 @@
 	left: 476px;
 	top: 370px;
 	animation-name: it-in;
-	animation-duration: 0.7s;
+	animation-duration: 0.5s;
 	animation-fill-mode: both;
-	animation-delay: 2s;
+	animation-delay: 1.6s;
 }
 .works {
 	position: absolute;
@@ -56,9 +56,9 @@
 	left: 377px;
 	top: 556px;
 	animation-name: works-in;
-	animation-duration: 0.7s;
+	animation-duration: 0.5s;
 	animation-fill-mode: both;
-	animation-delay: 3s;
+	animation-delay: 2.4s;
 }
 .show_me_btn {
 	font-family: 'Source Sans Pro';
@@ -82,7 +82,7 @@
 	animation-name: show-in;
 	animation-duration: 2s;
 	animation-fill-mode: both;
-	animation-delay: 4s;
+	animation-delay: 3.2s;
 }
 .show_me_btn:active {
 	color: #a0cb44;
