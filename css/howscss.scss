@@ -74,6 +74,22 @@ mark {
   color: $green;
   text-decoration: underline solid $green;
 }
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 180px;
+  left: 0px;
+  color: blue;
+  background-color: $background_color;
+  z-index: 1;
+
+  .right_panel {
+    position: absolute;
+    top: 0px;
+  }
+}
 .menu_bar {
   width: 100%;
   height: 180px;
