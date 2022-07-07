@@ -24,34 +24,49 @@
         /* When the user clicks on the button,
         show menu content */
         function showFundamentals() {
-            hideLeftList();
-            showTitle();
-            document.getElementById("fundamentals").style.display = "flex";
-            document.getElementsByClassName("fundamentals")[0].classList.add('green');
-            document.getElementsByClassName("research")[0].classList.remove('green');
-            document.getElementsByClassName("courses")[0].classList.remove('green');
-            document.getElementById("courses").style.display = "none";
-            document.getElementById("research").style.display = "none";
+            if (document.getElementById("fundamentals").style.display!="flex") {
+                hideLeftList();
+                showTitle();
+                document.getElementById("fundamentals").style.display = "flex";
+                document.getElementsByClassName("fundamentals")[0].classList.add('green');
+                document.getElementsByClassName("research")[0].classList.remove('green');
+                document.getElementsByClassName("courses")[0].classList.remove('green');
+                document.getElementById("courses").style.display = "none";
+                document.getElementById("research").style.display = "none";
+            } else {
+                document.getElementById("fundamentals").style.display = "none";
+                document.getElementsByClassName("fundamentals")[0].classList.remove('green');
+            };
         }
         function showCourses() {
-            hideLeftList();
-            showTitle();
-            document.getElementById("fundamentals").style.display = "none";
-            document.getElementById("research").style.display = "none";
-            document.getElementById("courses").style.display = "flex";
-            document.getElementsByClassName("fundamentals")[0].classList.remove('green');
-            document.getElementsByClassName("research")[0].classList.remove('green');
-            document.getElementsByClassName("courses")[0].classList.add('green');
+            if (document.getElementById("courses").style.display!="flex") {
+                hideLeftList();
+                showTitle();
+                document.getElementById("fundamentals").style.display = "none";
+                document.getElementById("research").style.display = "none";
+                document.getElementById("courses").style.display = "flex";
+                document.getElementsByClassName("fundamentals")[0].classList.remove('green');
+                document.getElementsByClassName("research")[0].classList.remove('green');
+                document.getElementsByClassName("courses")[0].classList.add('green');
+            } else {
+                document.getElementById("courses").style.display = "none";
+                document.getElementsByClassName("courses")[0].classList.remove('green');
+            };
         }
         function showResearch() {
-            hideLeftList();
-            showTitle();
-            document.getElementById("fundamentals").style.display = "none";
-            document.getElementById("courses").style.display = "none";
-            document.getElementById("research").style.display = "flex";
-            document.getElementsByClassName("fundamentals")[0].classList.remove('green');
-            document.getElementsByClassName("research")[0].classList.add('green');
-            document.getElementsByClassName("courses")[0].classList.remove('green');
+            if (document.getElementById("research").style.display!="flex") {
+                hideLeftList();
+                showTitle();
+                document.getElementById("fundamentals").style.display = "none";
+                document.getElementById("courses").style.display = "none";
+                document.getElementById("research").style.display = "flex";
+                document.getElementsByClassName("fundamentals")[0].classList.remove('green');
+                document.getElementsByClassName("research")[0].classList.add('green');
+                document.getElementsByClassName("courses")[0].classList.remove('green');
+            } else {
+                document.getElementById("research").style.display = "none";
+                document.getElementsByClassName("research")[0].classList.remove('green');
+            };    
         }
         function showSubmenu(el, showId) {
             hideSiblings(el);
@@ -121,6 +136,7 @@
                 <div id="courses" class="page_list">
                     <div class="page_btn" onclick="showSubmenu(this, 'general')">General Chemistry</div>
                     <div class="page_btn" onclick="showSubmenu(this, 'organic')">Organic Chemistry</div>
+                    <div class="page_btn disabled">Physical Chemistry</div>
                     <div class="page_btn disabled">Biochemistry</div>
                     <div class="page_btn disabled">Advanced Analytical Chemistry</div>
                 </div>
