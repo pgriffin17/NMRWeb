@@ -36,6 +36,33 @@ $font-family_1: Source Sans Pro;
   padding-left: 18%;
   padding-right: 30px;
 }
+.right_list {
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  top: 33%;
+  padding-left: 14%;
+  ol {
+    counter-reset: item;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  li {
+    display: block;
+    margin-bottom: .5em;
+    margin-left: 2em;
+    mark {
+      text-transform: uppercase;
+    }
+  }
+  li:before {
+    display: inline-block;
+    content: counter(item) " ";
+    counter-increment: item;
+    width: 2em;
+    margin-left: -2em;
+  }
+}
 .body_title {
   width: 90%;
   color: white;
@@ -85,6 +112,13 @@ mark {
   background-color: $background_color;
   z-index: 1;
 
+  .overlay_title {
+    position: absolute;
+    top: 112px;
+    width: 1125px;
+    text-align: center;
+    z-index: 1;
+  }
   .right_panel {
     position: absolute;
     top: 0px;

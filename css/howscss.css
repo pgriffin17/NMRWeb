@@ -30,6 +30,34 @@
   padding-right: 30px;
 }
 
+.right_list {
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  top: 33%;
+  padding-left: 14%;
+}
+.right_list ol {
+  counter-reset: item;
+  margin-left: 0;
+  padding-left: 0;
+}
+.right_list li {
+  display: block;
+  margin-bottom: 0.5em;
+  margin-left: 2em;
+}
+.right_list li mark {
+  text-transform: uppercase;
+}
+.right_list li:before {
+  display: inline-block;
+  content: counter(item) " ";
+  counter-increment: item;
+  width: 2em;
+  margin-left: -2em;
+}
+
 .body_title {
   width: 90%;
   color: white;
@@ -83,6 +111,13 @@ mark {
   left: 0px;
   color: blue;
   background-color: rgb(8, 8, 29);
+  z-index: 1;
+}
+.overlay .overlay_title {
+  position: absolute;
+  top: 112px;
+  width: 1125px;
+  text-align: center;
   z-index: 1;
 }
 .overlay .right_panel {

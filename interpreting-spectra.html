@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="./css/mainscss.css" rel="stylesheet" />
+    <link href="./css/howscss.css" rel="stylesheet" />
+    <title>Knox NMR Display</title>
+    <script type="text/javascript">
+        window.transitionToPage = function (href) {
+            document.querySelector('body').style.opacity = 0;
+            setTimeout(function () {
+                window.location.href = href
+            }, 500)
+        }
+        document.addEventListener('DOMContentLoaded', function (event) {
+            document.querySelector('body').style.opacity = 1;
+        })
+        function openOverlay(el, id) {
+            var overlay = document.getElementById(id);
+            overlay.classList.remove('animate__backOutLeft');
+            overlay.classList.add('animate__slideInLeft');
+            document.getElementById(id).style.display = "block";
+        }
+        function closeOverlay(el) {
+            var parent = el.parentElement.parentElement;
+            parent.classList.remove('animate__slideInLeft');
+            void el.offsetWidth;
+            parent.classList.add('animate__backOutLeft');
+            el.addEventListener('animationend', () => {
+                parent.style.display = "none";
+            });
+        }
+    </script>
+</head>
+<! The style in the body below removes the white margin on the edge and it makes text not selectable by the user (good
+    for final display).>
+
+    <body
+        style="margin: 0; -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+        <div class="bkg">
+            <span class="menu_button">
+                <div class="menu_bar">
+
+                    <div class="fundamentals">
+                        <span class="green">NMR<br> Fundamentals</span>
+                    </div>
+                    <div class="empty"></div>
+                    <div class="courses">
+                        Course <br>Usage
+                    </div>
+                    <div class="research">
+                        Faculty Research
+                    </div>
+                    <div class="title"><span class="green_page_title">Interpreting NMR Spectra</span></div>
+
+                </div>
+            </span>
+            <div class="left_panel"></div>
+            <div class="right_panel">
+                <span class="body_title" style="font-size: 40px;">There are four basic aspects <br>
+                of a <sup>1</sup>H NMR spectrum.</span>
+                <div class="right_list"><span class="body_text">
+                <ol>
+                    <li>Number of peaks in a spectrum:<br><mark onclick="openOverlay(this, 'symmetry')">Symmetry</mark></li>
+                    <li>Location of peaks in a spectrum:<br>
+                    <mark onclick="openOverlay(this, 'shift')">Chemical Shift</mark></li>
+                    <li>Size of the peak in the spectrum:<br>
+                    <mark onclick="openOverlay(this, 'integration')">Integration</mark></li>
+                    <li>Appearance of the peak<br>
+                    in the spectrum: <mark onclick="openOverlay(this, 'splitting')">Splitting</mark></li>
+                </ol>
+                    </span></div>
+            </div>
+            <div id="symmetry" class="overlay animate__animated animate__backInLeft">
+                <div class="overlay_title"><span class="green_page_title">Symmetry</span></div>
+                <div class="left_panel"></div>
+                <div class="right_panel">
+                    <span class="body_title">Number of Peaks</span>
+                    <div class="right_text_box"><span class="body_text">With NMR spectroscopy, every peak corresponds to a unique type of the atom being analyzed. Having four peaks in a <sup>13</sup>C NMR spectrum doesn’t necessarily mean the compound has four carbons. The compound might have more than four carbons if there are two carbons that have the exact same chemical environment. If there is symmetry in the molecule, meaning
+                    if the carbons have exactly the same chemical environment, those carbons will all be one peak. All that can knows is that with four peaks, a molecule has four unique types of carbon.
+                    <br><br>
+                    For <sup>1</sup>H NMR spectroscopy, most often every hydrogen on a particular carbon will be identical to the others on the same carbon. Since there are often multiple H’s on the same carbon, many peaks in the proton NMR spectrum will end up representing more than one H. Again, the information about number of peaks is that the number of peaks corresponds to the number of unique proton environments.
+                        </span></div>
+                    <div class="back_button" onclick="closeOverlay(this)"></div>
+                </div>
+
+            </div>
+            <div id="shift" class="overlay animate__animated animate__backInLeft">
+                <div class="overlay_title"><span class="green_page_title">Chemical Shift</span></div>
+                <div class="left_panel"></div>
+                <div class="right_panel">
+                    <span class="body_title">Proximity of electrons<br> to nuclei</span>
+                    <div class="right_text_box"><span class="body_text">With NMR spectroscopy, every peak corresponds to a unique type of the atom being analyzed. Having four peaks in a <sup>13</sup>C NMR spectrum doesn’t necessarily mean the compound has four carbons. The compound might have more than four carbons if there are two carbons that have the exact same chemical environment. If there is symmetry in the molecule, meaning
+                    if the carbons have exactly the same chemical environment, those carbons will all be one peak. All that can knows is that with four peaks, a molecule has four unique types of carbon.
+                    <br><br>
+
+                    For <sup>1</sup>H NMR spectroscopy, most often every hydrogen on a particular carbon will be identical to the others on the same carbon. Since there are often multiple H’s on the same carbon, many peaks in the proton NMR spectrum will end up representing more than one H. Again, the information about number of peaks is that the number of peaks corresponds to the number of unique proton environments.
+                        </span></div>
+                    <div class="back_button" onclick="closeOverlay(this)"></div>
+                </div>
+
+            </div>
+
+            <div id="integration" class="overlay animate__animated animate__backInLeft">
+                <div class="overlay_title"><span class="green_page_title">Integration</span></div>
+                <div class="left_panel"></div>
+                <div class="right_panel">
+                    <span class="body_title">Number of protons</span>
+                    <div class="right_text_box"><span class="body_text">With NMR spectroscopy, every peak corresponds to a unique type of the atom being analyzed. Having four peaks in a <sup>13</sup>C NMR spectrum doesn’t necessarily mean the compound has four carbons. The compound might have more than four carbons if there are two carbons that have the exact same chemical environment. If there is symmetry in the molecule, meaning
+                    if the carbons have exactly the same chemical environment, those carbons will all be one peak. All that can knows is that with four peaks, a molecule has four unique types of carbon.
+                    <br><br>
+                    
+                    For <sup>1</sup>H NMR spectroscopy, most often every hydrogen on a particular carbon will be identical to the others on the same carbon. Since there are often multiple H’s on the same carbon, many peaks in the proton NMR spectrum will end up representing more than one H. Again, the information about number of peaks is that the number of peaks corresponds to the number of unique proton environments.
+                        </span></div>
+                    <div class="back_button" onclick="closeOverlay(this)"></div>
+                </div>
+
+            </div>
+
+            <div id="splitting" class="overlay animate__animated animate__backInLeft">
+                <div class="overlay_title"><span class="green_page_title">Splitting</span></div>
+                <div class="left_panel"></div>
+                <div class="right_panel">
+                    <span class="body_title">Number of neighboring protons</span>
+                    <div class="right_text_box"><span class="body_text">With NMR spectroscopy, every peak corresponds to a unique type of the atom being analyzed. Having four peaks in a <sup>13</sup>C NMR spectrum doesn’t necessarily mean the compound has four carbons. The compound might have more than four carbons if there are two carbons that have the exact same chemical environment. If there is symmetry in the molecule, meaning
+                    if the carbons have exactly the same chemical environment, those carbons will all be one peak. All that can knows is that with four peaks, a molecule has four unique types of carbon.
+                    <br><br>
+                    
+                    For <sup>1</sup>H NMR spectroscopy, most often every hydrogen on a particular carbon will be identical to the others on the same carbon. Since there are often multiple H’s on the same carbon, many peaks in the proton NMR spectrum will end up representing more than one H. Again, the information about number of peaks is that the number of peaks corresponds to the number of unique proton environments.
+                        </span></div>
+                    <div class="back_button" onclick="closeOverlay(this)"></div>
+                </div>
+
+            </div>
+            <div class="blue_stripe"></div>
+            <div class="back_button" onclick="transitionToPage('home.html')"></div>
+            <div class="home_click" onclick="transitionToPage('home.html')">
+                <div class="home_button"><span class="home_nmr">N<span class="home_nmr_underline">MR</span></span></div>
+            </div>
+        </div>
+    </body>
+
+</html>
