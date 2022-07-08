@@ -32,7 +32,7 @@ $font-family_1: Source Sans Pro;
   height: 50%;
   position: absolute;
   top: 33%;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-left: 18%;
   padding-right: 30px;
 }
@@ -231,27 +231,4 @@ bottom: 18px; }
   background-position: center center;
   background-size: 38px 46px;
   transform: rotate(180deg);
-}
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-  background: rgba(17,17,65,1);
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #555563;
-  border-radius:  8px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  border-radius: 6px;
-  background: #aaaaaacc;
-  border: 2px solid #555563;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }

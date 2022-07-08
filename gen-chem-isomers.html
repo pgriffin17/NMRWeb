@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="./css/mainscss.css" rel="stylesheet" />
+    <link href="./css/howscss.css" rel="stylesheet" />
+    <title>Knox NMR Display</title>
+    <script type="text/javascript">
+        window.transitionToPage = function (href) {
+            document.querySelector('body').style.opacity = 0;
+            setTimeout(function () {
+                window.location.href = href
+            }, 500)
+        }
+        document.addEventListener('DOMContentLoaded', function (event) {
+            document.querySelector('body').style.opacity = 1;
+        })
+        function openOverlay(el, id) {
+            var overlay = document.getElementById(id);
+            overlay.classList.remove('animate__backOutLeft');
+            overlay.classList.add('animate__slideInLeft');
+            document.getElementById(id).style.display = "block";
+        }
+        function closeOverlay(el) {
+            var parent = el.parentElement.parentElement;
+            parent.classList.remove('animate__slideInLeft');
+            void el.offsetWidth;
+            parent.classList.add('animate__backOutLeft');
+            el.addEventListener('animationend', () => {
+                parent.style.display = "none";
+            });
+        }
+    </script>
+</head>
+<! The style in the body below removes the white margin on the edge and it makes text not selectable by the user (good
+    for final display).>
+
+    <body
+        style="margin: 0; -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+        <div class="bkg">
+            <span class="menu_button">
+                <div class="menu_bar">
+
+                    <div class="fundamentals">
+                        NMR<br> Fundamentals
+                    </div>
+                    <div class="empty"></div>
+                    <div class="courses">
+                        <span class="green">Course <br>Usage</span>
+                    </div>
+                    <div class="research">
+                        Faculty Research
+                    </div>
+                    <div class="title"><span class="green_page_title">General Chemistry</span></div>
+
+                </div>
+            </span>
+            <div class="left_panel"></div>
+            <div class="right_panel">
+                <span class="body_title">Identify Unknown Isomers</span>
+                <div class="right_text_box"><span class="body_text"><sup>13</sup>C NMR spectroscopy is used to distinguish the number of types of carbon atoms among a set of isomer compounds with the same molecular formula but different structures.
+                    </span></div>
+            </div>
+            <div class="blue_stripe"></div>
+            <div class="back_button" onclick="transitionToPage('home.html')"></div>
+            <div class="home_click" onclick="transitionToPage('home.html')">
+                <div class="home_button"><span class="home_nmr">N<span class="home_nmr_underline">MR</span></span></div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -272,4 +272,28 @@ body {
   top: 112px;
   left: 1733px;
   width: 192px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+  background: rgb(17, 17, 65);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #555563;
+  border-radius: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(170, 170, 170, 0.8);
+  border: 2px solid #555563;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }/*# sourceMappingURL=mainscss.css.map */

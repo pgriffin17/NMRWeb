@@ -49,6 +49,8 @@
                 document.getElementsByClassName("research")[0].classList.remove('green');
                 document.getElementsByClassName("courses")[0].classList.add('green');
             } else {
+                hideLeftList();
+                showTitle();
                 document.getElementById("courses").style.display = "none";
                 document.getElementsByClassName("courses")[0].classList.remove('green');
             };
@@ -152,19 +154,19 @@
                     <div class="page_sub_btn">
                         <h3>Organic Chemistry I</h3>
                         <ul>
-                            <li><a>Spectroscopy Unknown Lab</a></li></ul>
+                            <li><a onclick="transitionToPage('orgo-spec-unknown.html')">Spectroscopy Unknown Lab</a></li></ul>
                     </div>
                     <div class="page_sub_btn">
                         <h3>Organic Chemistry II</h3>
                         <ul>
-                            <li><a>Stereoselective reduction of camphor</a></li>
-                            <li><a>3-week lab synthesis project</a></li>
+                            <li><a onclick="transitionToPage('orgo-camphor.html')">Stereoselective reduction of camphor</a></li>
+                            <li><a onclick="transitionToPage('orgo-synthesis.html')">3-week lab synthesis project</a></li>
                         </ul>
                     </div>
                     <div class="page_sub_btn">
                         <h3>Advanced Laboratory Techniques</h3>
                         <ul>
-                            <li><a>Placeholder lab name</a></li>
+                            <li><a>Placeholder Lab Name</a></li>
                         </ul>
                     </div>
                 </div>
@@ -172,7 +174,16 @@
                     <div class="page_sub_btn">
                         <h3>General Chemistry I</h3>
                         <ul>
-                            <li><a>Placeholder lab name</a></li>
+                            <li><a onclick="transitionToPage('gen-chem-isomers.html')">Identify Unknown Isomers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="advanced-synthesis" class="left_list">
+                    <div class="page_sub_btn">
+                        <h3>Advanced Synthesis Laboratory</h3>
+                        <ul>
+                            <li><a onclick="transitionToPage('adv-synth-ligand.html')">Ligand Synthesis</a></li>
+                            <li><a onclick="transitionToPage('adv-synth-precatalyst.html')">Precatalyst Synthesis</a></li>
                         </ul>
                     </div>
                 </div>

@@ -261,3 +261,27 @@ bottom: 18px; }
 	left: 1733px;
 	width: 192px;
 }
+
+/* width */
+::-webkit-scrollbar {
+	width: 12px;
+	background: rgba(17,17,65,1);
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #555563;
+	border-radius:  12px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #aaaaaacc;
+	border: 2px solid #555563;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+  }
