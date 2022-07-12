@@ -220,6 +220,39 @@ bottom: 18px; }
   color: $green;
   text-decoration: underline solid $title_first_letter_color 7%;
 }
+.light_panel {
+  padding-left: 10%;
+  position: absolute;
+
+  h3 {
+    font-family: $font-family_1;
+    font-weight: 400;
+    font-size: 30px;
+    color: $body_text;
+  }
+  .stop_button {
+    background-color: red;
+    border: none;
+    font-weight: bold;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .stop_button:active {
+    opacity: 0.8;
+  }
+  .light_button {
+    background-color: $body_text;
+    border: none;
+    color: $top_stripe_color;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .light_button:active {
+    opacity: 0.8;
+  }
+}
 .back_button {
   position: absolute;
   width: 212px;

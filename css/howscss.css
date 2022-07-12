@@ -239,6 +239,39 @@ mark {
           text-decoration: underline solid #FFFCFC 7%;
 }
 
+.light_panel {
+  padding-left: 10%;
+  position: absolute;
+}
+.light_panel h3 {
+  font-family: Source Sans Pro;
+  font-weight: 400;
+  font-size: 30px;
+  color: #FFFCFC;
+}
+.light_panel .stop_button {
+  background-color: red;
+  border: none;
+  font-weight: bold;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+}
+.light_panel .stop_button:active {
+  opacity: 0.8;
+}
+.light_panel .light_button {
+  background-color: #FFFCFC;
+  border: none;
+  color: rgb(92, 72, 253);
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+}
+.light_panel .light_button:active {
+  opacity: 0.8;
+}
+
 .back_button {
   position: absolute;
   width: 212px;
