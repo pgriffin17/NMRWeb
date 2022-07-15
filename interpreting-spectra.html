@@ -19,6 +19,12 @@
                 window.location.href = href
             }, 500)
         }
+        function menuTransition(menu) {
+            var params = new URLSearchParams();
+            params.append("menu", menu);
+            var url = "home.html?" + params.toString();
+            transitionToPage(url);
+        }
         document.addEventListener('DOMContentLoaded', function (event) {
             document.querySelector('body').style.opacity = 1;
         })
@@ -49,13 +55,13 @@
                 <div class="menu_bar">
 
                     <div class="fundamentals">
-                        <span class="green">NMR<br> Fundamentals</span>
+                        <span class="green" onclick="menuTransition('fundamentals')">NMR<br> Fundamentals</span>
                     </div>
                     <div class="empty"></div>
-                    <div class="courses">
+                    <div class="courses" onclick="menuTransition('courses')">
                         Course <br>Usage
                     </div>
-                    <div class="research">
+                    <div class="research" onclick="menuTransition('research')">
                         Faculty Research
                     </div>
                     <div class="title"><span class="green_page_title">Interpreting NMR Spectra</span></div>
@@ -68,13 +74,13 @@
                 of a <sup>1</sup>H NMR spectrum.</span>
                 <div class="right_list"><span class="body_text">
                 <ol>
-                    <li>Number of peaks in a spectrum:<br><mark onclick="openOverlay(this, 'symmetry')">Symmetry</mark></li>
+                    <li>Number of peaks in a spectrum:<br><span onclick="openOverlay(this, 'symmetry')"><mark >Symmetry</mark><img src="images/arrowGreen.svg" class="arrow_small"></span></li>
                     <li>Location of peaks in a spectrum:<br>
-                    <mark onclick="openOverlay(this, 'shift')">Chemical Shift</mark></li>
+                        <span onclick="openOverlay(this, 'shift')"><mark >Chemical Shift</mark><img src="images/arrowGreen.svg" class="arrow_small"></span></li>
                     <li>Size of the peak in the spectrum:<br>
-                    <mark onclick="openOverlay(this, 'integration')">Integration</mark></li>
+                        <span onclick="openOverlay(this, 'integration')"><mark >Integration</mark><img src="images/arrowGreen.svg" class="arrow_small"></span></li>
                     <li>Appearance of the peak<br>
-                    in the spectrum: <mark onclick="openOverlay(this, 'splitting')">Splitting</mark></li>
+                    in the spectrum: <span onclick="openOverlay(this, 'splitting')"><mark >Splitting</mark><img src="images/arrowGreen.svg" class="arrow_small"></span></li>
                 </ol>
                     </span></div>
             </div>

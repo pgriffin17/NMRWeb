@@ -19,8 +19,20 @@
 
         document.addEventListener('DOMContentLoaded', function (event) {
             document.querySelector('body').style.opacity = 1;
+            getMenu();
         })
+        function getMenu() {
+            var params = new URLSearchParams(window.location.search),
+                menu = params.get("menu");
 
+            if (menu === "fundamentals") {
+                showFundamentals();
+            } else if (menu === "courses") {
+                showCourses();
+            } else if (menu === "research") {
+                showResearch();
+            }
+        }
         /* When the user clicks on the button,
         show menu content */
         function showFundamentals() {

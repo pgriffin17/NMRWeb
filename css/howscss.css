@@ -1,11 +1,16 @@
 .left_panel {
   width: 1125px;
   height: 900px;
-  background: #4C4C4C;
+  background: rgb(8, 8, 29);
   opacity: 1;
   position: absolute;
   top: 180px;
   left: 0px;
+}
+.left_panel img {
+  margin-left: 50px;
+  margin-top: 50px;
+  background: rgb(8, 8, 29);
 }
 
 .right_panel {
@@ -18,6 +23,11 @@
   left: 1125px;
   float: left;
   overflow: hidden;
+}
+
+.arrow_small {
+  padding-left: 20px;
+  margin-bottom: -6px;
 }
 
 .right_text_box {
@@ -44,8 +54,9 @@
 }
 .right_list li {
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
   margin-left: 2em;
+  line-height: 150%;
 }
 .right_list li mark {
   text-transform: uppercase;

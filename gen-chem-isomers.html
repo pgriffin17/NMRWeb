@@ -22,6 +22,12 @@
         document.addEventListener('DOMContentLoaded', function (event) {
             document.querySelector('body').style.opacity = 1;
         })
+        function menuTransition(menu) {
+            var params = new URLSearchParams();
+            params.append("menu", menu);
+            var url = "home.html?" + params.toString();
+            transitionToPage(url);
+        }
         function openOverlay(el, id) {
             var overlay = document.getElementById(id);
             overlay.classList.remove('animate__backOutLeft');
@@ -48,14 +54,14 @@
             <span class="menu_button">
                 <div class="menu_bar">
 
-                    <div class="fundamentals">
+                    <div class="fundamentals" onclick="menuTransition('fundamentals')">
                         NMR<br> Fundamentals
                     </div>
                     <div class="empty"></div>
-                    <div class="courses">
+                    <div class="courses" onclick="menuTransition('courses')">
                         <span class="green">Course <br>Usage</span>
                     </div>
-                    <div class="research">
+                    <div class="research" onclick="menuTransition('research')">
                         Faculty Research
                     </div>
                     <div class="title"><span class="green_page_title">General Chemistry</span></div>
