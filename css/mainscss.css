@@ -34,6 +34,11 @@ body {
   background: rgb(8, 8, 29);
 }
 
+.arrow_menu {
+  padding-left: 20px;
+  margin-bottom: -2px;
+}
+
 #home_title {
   color: #C8FE55;
   text-align: left;
