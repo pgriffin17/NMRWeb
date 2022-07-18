@@ -21,6 +21,14 @@ $font-family_1: Source Sans Pro;
     margin-top: 50px;
     background: $background_color;
   }
+
+  .full_img {
+    max-width:100%;
+    max-height: 100%;
+    margin: 0px;
+    position: relative;
+    width: 100%;
+  }
 }
 .right_panel {
   width: calc(100% - 1125px);
