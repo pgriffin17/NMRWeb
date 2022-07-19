@@ -99,12 +99,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 244px 176px;
-	&:focus {
-		animation: arrowMove 1s 2 alternate;
-	}
-	&:active {
-		animation: none;
-	}
 }
 .menu_bar {
   width: 100%;
