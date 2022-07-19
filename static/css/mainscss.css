@@ -106,14 +106,6 @@ body {
   background-position: center center;
   background-size: 244px 176px;
 }
-.arrow:focus {
-  -webkit-animation: arrowMove 1s 2 alternate;
-          animation: arrowMove 1s 2 alternate;
-}
-.arrow:active {
-  -webkit-animation: none;
-          animation: none;
-}
 
 .menu_bar {
   width: 100%;
