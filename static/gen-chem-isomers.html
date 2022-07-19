@@ -22,9 +22,6 @@
         document.addEventListener('DOMContentLoaded', function (event) {
             document.querySelector('body').style.opacity = 1;
         })
-        function showImage(imageSRC) {
-            document.getElementById("left_full_img").src=imageSRC;
-        }
         function menuTransition(menu) {
             var params = new URLSearchParams();
             params.append("menu", menu);
@@ -62,26 +59,24 @@
                     </div>
                     <div class="empty"></div>
                     <div class="courses" onclick="menuTransition('courses')">
-                        Course <br>Usage
+                        <span class="green">Course <br>Usage</span>
                     </div>
                     <div class="research" onclick="menuTransition('research')">
-                        <span class="green">Faculty Research</span>
+                        Faculty Research
                     </div>
-                    <div class="title"><span class="green_page_title">Dr. Katie Adelsberger</span></div>
+                    <div class="title"><span class="green_page_title">General Chemistry</span></div>
 
                 </div>
             </span>
-            <div class="left_panel">
-                <img id="left_full_img" class="full_img" src="static/images/5a-student.jpg">
-            </div>
+            <div class="left_panel"></div>
             <div class="right_panel">
-                <span class="body_title">Soil Phosphorus</span>
-                <div class="right_text_box"><span class="body_text">Professor Adelsberger’s research focuses on the characterization of soil phosphorus in prairie soils in order to determine the primary controls on phosphorus availability. Available forms may be affected by processes such as prairie burns, erosion, and animal manuring. <mark onclick="showImage('static/images/5a-student.jpg')">Here</mark>, we see a student taking a core sample. <mark onclick="showImage('static/images/5a-P-Green-Oaks.png')">This graph</mark> shows the phosphorus results from samples captured from different prairies at Green Oaks. As you can see, all levels of phosphorus are the same for each prairie.
-                </span></div>
+                <span class="body_title">Identify Unknown Isomers</span>
+                <div class="right_text_box"><span class="body_text"><sup>13</sup>C NMR spectroscopy is used to distinguish the number of types of carbon atoms among a set of isomer compounds with the same molecular formula but different structures.
+                    </span></div>
             </div>
             <div class="blue_stripe"></div>
-            <div class="back_button" onclick="transitionToPage('home.html')"></div>
-            <div class="home_click" onclick="transitionToPage('home.html')">
+            <div class="back_button" onclick="transitionToPage('/static/home.html')"></div>
+            <div class="home_click" onclick="transitionToPage('/static/home.html')">
                 <div class="home_button"><span class="home_nmr">N<span class="home_nmr_underline">MR</span></span></div>
             </div>
         </div>
