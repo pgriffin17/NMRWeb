@@ -13,13 +13,6 @@
     <link href="/static/css/howscss.css" rel="stylesheet" />
     <title>Knox NMR Display</title>
     <script type="text/javascript">
-
-        var p = false;
-        var a = false;
-        var r = false;
-        var t = false;
-        var y = false;
-
         window.transitionToPage = function (href) {
             document.querySelector('body').style.opacity = 0;
             setTimeout(function () {
@@ -29,6 +22,9 @@
         document.addEventListener('DOMContentLoaded', function (event) {
             document.querySelector('body').style.opacity = 1;
         })
+        function showImage(imageSRC) {
+            document.getElementById("left_full_img").src=imageSRC;
+        }
         function menuTransition(menu) {
             var params = new URLSearchParams();
             params.append("menu", menu);
@@ -50,26 +46,6 @@
                 parent.style.display = "none";
             });
         }
-
-        function checkParty(el) {
-            var letter = el.textContent.toLowerCase();
-            if(letter === "p") {
-                p = true;
-            } else if (letter === "a") {
-                a = true;
-            } else if (letter === "r") {
-                r = true;
-            } else if (letter === "t") {
-                t = true;
-            } else if (letter === "y") {
-                y = true;
-            }
-            
-            if (p&&a&&r&&t&&y) {
-                transitionToPage("secret-party.html");
-            }
-        }
-        
     </script>
 </head>
 <! The style in the body below removes the white margin on the edge and it makes text not selectable by the user (good
@@ -89,59 +65,23 @@
                         Course <br>Usage
                     </div>
                     <div class="research" onclick="menuTransition('research')">
-                        Faculty Research
+                        <span class="green">Faculty Research</span>
                     </div>
-                    <div class="title"><span class="green_page_title">Credits</span></div>
+                    <div class="title"><span class="green_page_title">Dr. Katie Adelsberger</span></div>
 
                 </div>
             </span>
             <div class="left_panel">
+                <img id="left_full_img" class="full_img" src="/static/images/5a-student.jpg">
             </div>
             <div class="right_panel">
-                <span class="body_title">Credits and Acknowledgements</span>
-                <div class="right_text_box"><span class="body_text">
-                    This interactive educational exhibit has been created through the partnership of the Knox College Chemistry, Physics & Astronomy, and Art departments.<br><br>
-                    <mark>NMR Display Inspired By</mark><br>
-                    Peoria USDA Laboratory
-                    <br><br>
-                    <mark>Digital Display Designed By</mark><br>
-                    Kelly Fisk
-                    <br><br>
-                    <mark>HTML/CSS/Javascript By</mark><br>
-                    <a class="party" onclick="checkParty(this)">P</a>hilip Griffin '20
-                    <br><br>
-                    <mark>Hardware and Light Design By</mark><br>
-                    Philip Griffin '20<br>
-                    <a class="party" onclick="checkParty(this)">A</a>lex Fluegel '19
-                    <br><br>
-                    <mark>Faculty Mentors</mark><br>
-                    Diana Cermak<br>
-                    Tim Stedman
-                    <br><br>
-                    <mark>Assistance From</mark><br>
-                    <a class="party" onclick="checkParty(this)">T</a>hy Le '23<br>
-                    Jessie Quach '??
-                    <br><br>
-                    <mark>Special Thanks to</mark><br>
-                    Holabird & Root<br>
-                    PJ Hoerr<br>
-                    Guy who cut open NMR<br>
-                    Grant for instrument
-                    <br><br>
-                    <mark>Knox Chemistry Department at Installation</mark><br>
-                    Helen Ho<a class="party" onclick="checkParty(this)">y</a>t<br>
-                    Andy Mehl<br>
-                    Tom Clayton<br>
-                    Larry Welch<br>
-                    Diana Cermak<br>
-                    Mary Crawford<br>
-                    Donna <a class="party" onclick="checkParty(this)">R</a>obinson<br>
-                    Philip Griffin
-                    </span></div>
+                <span class="body_title">Soil Phosphorus</span>
+                <div class="right_text_box"><span class="body_text">Professor Adelsberger’s research focuses on the characterization of soil phosphorus in prairie soils in order to determine the primary controls on phosphorus availability. Available forms may be affected by processes such as prairie burns, erosion, and animal manuring. <mark onclick="showImage('/static/images/5a-student.jpg')">Here</mark>, we see a student taking a core sample. <mark onclick="showImage('/static/images/5a-P-Green-Oaks.png')">This graph</mark> shows the phosphorus results from samples captured from different prairies at Green Oaks. As you can see, all levels of phosphorus are the same for each prairie.
+                </span></div>
             </div>
             <div class="blue_stripe"></div>
-            <div class="back_button" onclick="transitionToPage('home.html')"></div>
-            <div class="home_click" onclick="transitionToPage('home.html')">
+            <div class="back_button" onclick="transitionToPage('/static/home.html')"></div>
+            <div class="home_click" onclick="transitionToPage('/static/home.html')">
                 <div class="home_button"><span class="home_nmr">N<span class="home_nmr_underline">MR</span></span></div>
             </div>
         </div>
