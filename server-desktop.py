@@ -28,6 +28,16 @@ def index():
     return render_template('index.html', 
                             last_updated=dir_last_updated('static'))
 
+@app.route('/how-it-works')
+def how_it_works():
+    return render_template('how-it-works.html', 
+                            last_updated=dir_last_updated('static'))
+
+@app.route('/party')
+def party():
+    return render_template('secret-party.html', 
+                            last_updated=dir_last_updated('static'))
+
 @app.route('/off', methods=['POST'])
 def off():
     procOff()
@@ -63,8 +73,8 @@ def electronics():
     #pixels.fill((0,200,0))
     return "electronics"
     
-@app.route('/party', methods=['POST'])
-def party():
+@app.route('/partyLights', methods=['POST'])
+def partyLights():
     procOff()
     print("Party lights on!")
     #simpleRainbow()
