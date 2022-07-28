@@ -34,6 +34,11 @@ def index():
     return render_template('index.html', 
                             last_updated=dir_last_updated('static'))
 
+@app.route('/secret-party')
+def secretParty():
+    return render_template('secret-party.html', 
+                            last_updated=dir_last_updated('static'))
+
 
 @app.route('/off', methods=['POST'])
 def off():
