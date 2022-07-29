@@ -59,7 +59,7 @@ def rainbowCycle(strip, wait_ms=10, iterations=1, start=0, count=None):
         strip.show()
         time.sleep(wait_ms / 1000.0)
         
-    colorWipe(strip, Color(0,0,0), 20)
+    colorWipe(strip, Color(0,0,0), 10)
 
 # Main program logic follows:
 if __name__ == '__main__':

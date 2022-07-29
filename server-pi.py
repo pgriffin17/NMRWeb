@@ -44,7 +44,7 @@ def procOff():
     if not (proc==''):
         print('PARENT      : Signaling child')
         sys.stdout.flush()
-        os.kill(proc.pid, signal.SIGINT)
+        os.kill(proc.pid, signal.SIGUSR1)
         time.sleep(0.05)
         proc=''
 
