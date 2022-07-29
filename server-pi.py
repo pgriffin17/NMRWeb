@@ -12,6 +12,9 @@ import sys
 num_pixels = 60
 
 app = Flask(__name__)
+# WARNING
+# NEVER SET BRIGHTNESS ABOVE 0.5!!! This could overload the power
+# supply unit or burn electrical connections (and potentially the building).
 pixels=neopixel.NeoPixel(board.D18, num_pixels, brightness=0.1)
 proc = ''
 
@@ -21,10 +24,14 @@ proc = ''
 
 def fillRange(color, start, count):
     # This function fills all pixels from start to start+count
-    # the given color
-    for i in range(start, start+count+1):
+    # the given color. Pixels automatically show the color
+    # as it is written (no need for show function).
+    # Usage: fillRange((R,G,B), startPixel, number of pixels to color)
+    pixels.fill((0,0,0)) # Turn all pixels off
+
+    # Color all pixels the given color
+    for i in range(start, start+count):
         pixels[i] = color
-    #pixels.show()
 
 def dir_last_updated(folder):
     return str(max(os.path.getmtime(os.path.join(root_path, f))
@@ -67,6 +74,8 @@ def off():
 def magnet():
     procOff()
     print("Magnet lights on!")
+    # This colors pixels in a given range.
+    # fillRange((R,G,B), startPixel, number of pixels to color)
     fillRange((255,0,0), 30, 8)
     return "Magnet"
 	
@@ -74,7 +83,9 @@ def magnet():
 def n2():
     procOff()
     print("n2tank lights on!")
-    #pixels.fill((0,200,200))
+    # pixels.fill methods color all pixels on the strip
+    # that same color.
+    pixels.fill((0,200,200))
     return "n2tank"
 	
 @app.route('/he', methods=['POST'])
