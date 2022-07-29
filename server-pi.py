@@ -9,10 +9,10 @@ import subprocess
 import time
 import sys
 
-num_pixels = 34
+num_pixels = 60
 
 app = Flask(__name__)
-pixels=neopixel.NeoPixel(board.D18, 34, brightness=0.1)
+pixels=neopixel.NeoPixel(board.D18, num_pixels, brightness=0.1)
 proc = ''
 
 ''' The pixels(LEDs) in here should only be used for the solid colors
@@ -22,7 +22,7 @@ proc = ''
 def fillRange(color, start, count):
     # This function fills all pixels from start to start+count
     # the given color
-    for i in range(start, start+count):
+    for i in range(start, start+count+1):
         pixels[i] = color
     #pixels.show()
 
@@ -67,7 +67,7 @@ def off():
 def magnet():
     procOff()
     print("Magnet lights on!")
-    fillRange((255,0,0), 30, 5)
+    fillRange((255,0,0), 30, 8)
     return "Magnet"
 	
 @app.route('/n2', methods=['POST'])
