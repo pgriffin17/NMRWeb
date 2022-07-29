@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="/static/css/mainscss.css" rel="stylesheet" />
     <link href="/static/css/howscss.css" rel="stylesheet" />
+    <script type=text/javascript src="{{ url_for('static', filename='js/jQuery.js') }}"></script>
     <title>Knox NMR Display</title>
     <script type="text/javascript">
         window.transitionToPage = function (href) {
@@ -73,12 +74,11 @@
                 <span class="body_title">NMR =
                     magnet +
                     radio pulse</span>
-                <div class="right_text_box"><span class="body_text">The heart of the NMR instrument is an <mark
-                            onclick="openOverlay(this, 'electromagnet')">electromagnet</mark> made of superconducting metals
-                        cooled to near absolute zero using <mark>liquid helium</mark>.
-                        <br><br>A <mark>sample</mark> (made of your compound of interest and a deuterated NMR solvent)
+                <div class="right_text_box"><span class="body_text">The heart of the NMR instrument is an <mark id="magnetButton">electromagnet</mark> made of superconducting metals
+                        cooled to near absolute zero using <mark id="heButton">liquid helium</mark>.
+                        <br><br>A <mark onclick="openOverlay(this, 'sample')">sample</mark> (made of your compound of interest and a deuterated NMR solvent)
                         is lowered into the <mark>magnetic field</mark> where it will spin and be hit with
-                        <mark>electromagnetic pulses</mark> in the radio frequency (RF) range.
+                        <mark>electromagnetic pulses</mark> in the radio frequency (RF) range. <mark id="offButton">Turn off Lights.</mark>
                         <br><br>The frequency of these pulses is tuned to the specific nuclei of interest (most often
                         <sup>1</sup>H or <sup>13</sup>C, but other atoms can be observed as well). The nuclei will
                         absorb energy from the pulse and go from a lower energy state to a higher energy state. Once the
@@ -94,7 +94,7 @@
                         number of unique proton environments.
                     </span></div>
             </div>
-            <div id="electromagnet" class="overlay animate__animated animate__backInLeft">
+            <div id="sample" class="overlay animate__animated animate__backInLeft">
                 <div class="left_panel"></div>
                 <div class="right_panel">
                     <span class="body_title">NMR =
@@ -104,7 +104,7 @@
                             metals cooled to near absolute zero using <mark>liquid helium</mark>.
                             <br><br>A <mark>sample</mark> (made of your compound of interest and a deuterated NMR
                             solvent) is lowered into the <mark>magnetic field</mark> where it will spin and be hit
-                            with <mark>electromagnetic pulses</mark> in the radio frequency (RF) range.
+                            with <mark>electromagnetic pulses</mark> in the radio frequency (RF) range. 
                             <br><br>The frequency of these pulses is tuned to the specific nuclei of interest (most
                             often <sup>1</sup>H or <sup>13</sup>C, but other atoms can be observed as well). The
                             nuclei will absorb energy from the pulse and go from a lower energy state to a higher
@@ -130,6 +130,70 @@
                 <div class="home_button"><span class="home_nmr">N<span class="home_nmr_underline">MR</span></span></div>
             </div>
         </div>
+
+        <script>
+            $('#offButton').click(function() {
+                $.ajax({
+                      type:'POST',
+                      url: "{{ url_for('off')}}",
+                      dataType:"text",
+                      success: function(response){
+                         console.log(response);
+                         /*alert(response);*/
+                      }
+              });
+            });
+            $('#n2Button').click(function() {
+                $.ajax({
+                      type:'POST',
+                      url: "{{ url_for('n2')}}",
+                      dataType:"text",
+                      success: function(response){
+                         console.log(response);
+                      }
+              });
+            });
+            $('#heButton').click(function() {
+                $.ajax({
+                      type:'POST',
+                      url: "{{ url_for('he')}}",
+                      dataType:"text",
+                      success: function(response){
+                         console.log(response);
+                      }
+              });
+            });
+            $('#magnetButton').click(function() {
+                $.ajax({
+                      type:'POST',
+                      url: "{{ url_for('magnet')}}",
+                      dataType:"text",
+                      success: function(response){
+                         console.log(response);
+                      }
+              });
+            });
+            $('#electronicsButton').click(function() {
+                $.ajax({
+                      type:'POST',
+                      url: "{{ url_for('electronics')}}",
+                      dataType:"text",
+                      success: function(response){
+                         console.log(response);
+                      }
+              });
+            });
+            $('#partyButton').click(function() {
+                $.ajax({
+                      type:'POST',
+                      url: "{{ url_for('party')}}",
+                      dataType:"text",
+                      success: function(response){
+                         console.log(response);
+                      }
+              });
+            });
+          </script>
     </body>
 
 </html>

@@ -39,6 +39,11 @@ def secretParty():
     return render_template('secret-party.html', 
                             last_updated=dir_last_updated('static'))
 
+@app.route('/how-it-works')
+def howItWorks():
+    return render_template('how-it-works.html', 
+                            last_updated=dir_last_updated('static'))
+
 
 @app.route('/off', methods=['POST'])
 def off():
