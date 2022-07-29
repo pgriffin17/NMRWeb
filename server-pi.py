@@ -15,6 +15,17 @@ app = Flask(__name__)
 pixels=neopixel.NeoPixel(board.D18, 34, brightness=0.1)
 proc = ''
 
+''' The pixels(LEDs) in here should only be used for the solid colors
+ and not for animations. Animations should be handled in the led.py file
+ called to from this file. '''
+
+def fillRange(color, start, count):
+    # This function fills all pixels from start to start+count
+    # the given color
+    for i in range(start, start+count):
+        pixels[i] = color
+    #pixels.show()
+
 def dir_last_updated(folder):
     return str(max(os.path.getmtime(os.path.join(root_path, f))
                    for root_path, dirs, files in os.walk(folder)
@@ -56,7 +67,7 @@ def off():
 def magnet():
     procOff()
     print("Magnet lights on!")
-    pixels.fill((255,0,0))
+    fillRange((255,0,0), 30, 5)
     return "Magnet"
 	
 @app.route('/n2', methods=['POST'])
