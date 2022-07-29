@@ -6,6 +6,7 @@ import neopixel
 import os
 import signal
 import subprocess
+from subprocess import PIPE
 import time
 import sys
 
@@ -43,7 +44,7 @@ def procOff():
     if not (proc==''):
         print('PARENT      : Signaling child')
         sys.stdout.flush()
-        os.kill(proc.pid, signal.SIGUSR1)
+        os.kill(proc.pid, signal.SIGINT)
         time.sleep(0.05)
         proc=''
 
@@ -105,9 +106,10 @@ def electronics():
 @app.route('/party', methods=['POST'])
 def party():
     procOff()
-    print("Party lights on!")
-    #simpleRainbow()
-    rainbowCycle(pixels)
+    global proc
+    proc = subprocess.Popen(['python3',r'led.py','-c'],stdout=PIPE,stdin=PIPE)
+    print('PARENT      : Pausing before sending signal...')
+    sys.stdout.flush()
     return "party"
     
 def wheel(pos):
